@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+workspace/.itailor/runs/
+workspace/.itailor/scratch/
+workspace/.itailor/env.json
+workspace/.itailor/settings.local.json
+workspace/.itailor/graph.yaml
+workspace/.itailor/lessons.jsonl
+# the library copy is produced by sync_itailor.py; commit it only if you want a pinned snapshot
+# itailor/
