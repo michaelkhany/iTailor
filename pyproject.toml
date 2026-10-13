@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "itailor"
+version = "0.1.0"
+description = "iTailor: the patch mechanism as a library - write code, run it for real, read the real error, repair, verify, report."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Michael Bidollahkhani" }]
+keywords = ["agent", "llm", "patch", "coding-agent", "openai-compatible", "itailor", "daya"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Code Generators",
+]
+# The core has no dependencies. Everything it needs is in the standard library.
+dependencies = []
+
+[project.optional-dependencies]
+console = ["rich>=13"]
+keyring = ["keyring>=24"]
+dev = ["pytest>=8"]
+
+[project.scripts]
+itailor = "itailor.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/michaelkhany/itailor"
+
+[tool.setuptools.packages.find]
+include = ["itailor*"]
+
+[tool.setuptools.package-data]
+itailor = ["py.typed"]

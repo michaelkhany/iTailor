@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.itailor/runs/
+.itailor/settings.local.json
+.itailor/env.json
+.itailor/cache/
+.itailor/bandit.json
+.venv/
+venv/
